@@ -26,8 +26,8 @@ point_ability = Entry(root)
 point_ability.pack()
 
 def calculate_grade():
-    max_points = float(point_ability.get())
-    gotten_points = float(point_count.get())
+    max_points = float(eval(point_ability.get()))
+    gotten_points = float(eval(point_count.get()))
     percent_points_unround = gotten_points / max_points * 100
     percent_points_round = round(percent_points_unround)
     percent_result.config(text="Your percentage is: " + str(percent_points_round) + "%")
