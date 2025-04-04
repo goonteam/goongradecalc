@@ -2,3 +2,5 @@ __pycache__
 app.png
 goongc_temp
 output.txt
+build
+dist
