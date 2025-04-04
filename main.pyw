@@ -53,7 +53,15 @@ ZCwNhJJLJS+iEAEseVFasYG2Lw05gco+mgT8RSsIjsDEvpT3G0chAogowLSWJvAsC4UKIMKDEKii
 M1IKAUSkBIlZKNyXEgRBEESlCIL/AWnRvqKOwy4iAAAAAElFTkSuQmCC"""
 
 icon = base64.b64decode(icon_base_64)
-temp_png = "app.png"
+temp_folder = "goongc_temp"
+
+print("creating temp folder")
+try:
+    os.mkdir(temp_folder)
+except FileExistsError:
+    print("temp already exists")
+
+temp_png = "goongc_temp/app.png"
 icon_file = open(temp_png, "wb")
 icon_file.write(icon)
 icon_file.close()
@@ -156,3 +164,9 @@ result_of_percent_label = Label(using_percent_frame, text="You got a: ")
 result_of_percent_label.pack()
 
 root.mainloop()
+
+print("dleelrltlting temp")
+try:
+    os.rmdir(temp_folder)
+except FileNotFoundError:
+    print("alr exists")
