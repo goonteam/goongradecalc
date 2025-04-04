@@ -22,7 +22,7 @@ notebook = Notebook(root)
 notebook.pack(fill=BOTH, expand=True)
 
 # and frames
-
+print("test")
 using_points_frame = Frame(notebook)
 using_percent_frame = Frame(notebook)
 
